@@ -1,0 +1,103 @@
+/*#region Main groupings of elements on the page*/
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-break {
+    flex-basis: 0;
+    height: 0;
+}
+
+.flex-break-column {
+    flex-basis: 0;
+    width: 0;
+}
+
+#group-one {
+    position: relative;
+    display: flex;
+    float: left;
+    border: 1px solid green;
+    margin: 25px;
+    width: 200px;
+    height: 200px;
+}
+
+#group-two {
+    position: relative;
+    float: left;
+    border: 1px solid red;
+    margin: 25px;
+    width: 200px;
+    height: 200px;
+}
+
+#group-three {
+    float: left;
+    padding: 25px;
+    margin: 25px;
+    width: 150px;
+    height: 450px;
+    background-color: white;
+}
+/*#endregion*/
+
+/*#region Visual elements*/
+.rectangle {
+    width: 100px;
+    height: 15px;
+    background-color: darkblue;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: cadetblue;
+}
+
+.diamond {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: red;
+    position: relative;
+    top: -50px;
+}
+.diamond:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: red;
+}
+/*#endregion*/
+
+/*#region Breakpoints setup*/
+@media (min-width: 0) and (max-width: 582px){
+    #group-three {
+        background-color: darkblue;
+    }
+    .flex-break {
+        flex-basis: 100%;
+    }
+    .flex-break-column {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: 583px) and (max-width: 900px) {
+    #group-three {
+        background-color: indianred;
+    }
+    .flex-break-column {
+        flex-basis: 100%;
+    }
+}
+/*#endregion*/
