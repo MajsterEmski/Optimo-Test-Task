@@ -6,9 +6,12 @@
     justify-content: space-between;
 }
 
-.flex-break {
-    flex-basis: 0;
-    height: 0;
+.flex-subcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 60%;
 }
 
 .flex-break-column {
@@ -16,11 +19,15 @@
     width: 0;
 }
 
+.flex-break {
+    flex-basis: 0;
+    height: 0;
+}
+
 #group-one {
     position: relative;
     display: flex;
     float: left;
-    border: 1px solid green;
     margin: 25px;
     width: 200px;
     height: 200px;
@@ -29,7 +36,6 @@
 #group-two {
     position: relative;
     float: left;
-    border: 1px solid red;
     margin: 25px;
     width: 200px;
     height: 200px;
@@ -40,7 +46,7 @@
     padding: 25px;
     margin: 25px;
     width: 150px;
-    height: 450px;
+    height: 350px;
     background-color: white;
 }
 /*#endregion*/
@@ -90,6 +96,13 @@
     .flex-break-column {
         flex-basis: 100%;
     }
+    .flex-subcontainer {
+        width: 100%;
+        justify-content: center;
+    }
+    .flex-container {
+        justify-content: center;
+    }
 }
 
 @media (min-width: 583px) and (max-width: 900px) {
@@ -98,6 +111,13 @@
     }
     .flex-break-column {
         flex-basis: 100%;
+    }
+    .flex-subcontainer {
+        width: 45%;
+        justify-content: space-evenly;
+    }
+    .flex-container {
+        justify-content: space-evenly;
     }
 }
 /*#endregion*/

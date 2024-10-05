@@ -4,24 +4,26 @@
         <title>Optimo test task!</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body style="background-color:forestgreen;">
+    <body style="background-color:forestgreen; overflow:hidden; margin:0;">
         <header style="height: 50px; background-color: yellowgreen; border: 5px solid black;"></header>
         <div class="flex-container">
-            <div id="group-one">
-                <div class="diamond" style="position:absolute; top:50px; left:0;"></div>
-                <div class="diamond" style="position:absolute; top: -50px; right: 0;"></div>
+            <div class="flex-subcontainer">
+                <div id="group-one">
+                    <div class="diamond" style="position:absolute; top:50px; left:0;"></div>
+                    <div class="diamond" style="position:absolute; top: -50px; right: 0;"></div>
+                </div>
+                <div class="flex-break-column"></div>
+                <div id="group-two">
+                    <div class="rectangle" style="position:absolute; left: 0; top: 75px;"></div>
+                    <div class="rectangle" style="position:absolute; left: 0; top: 110px;"></div>
+                    <div class="circle" style="position: absolute; right: 0; top: 60px;"></div>
+                </div>
             </div>
-            <div class="flex-break"></div>
-            <div id="group-two">
-                <div class="rectangle" style="position:absolute; left: 0; top: 75px;"></div>
-                <div class="rectangle" style="position:absolute; left: 0; top: 110px;"></div>
-                <div class="circle" style="position: absolute; right: 0; top: 60px;"></div>
+                <div class="flex-break"></div>
+                <div id="group-three">
+                    <div style="text-align:center">ABC</div>
+                </div>
             </div>
-            <div class="flex-break-column"></div>
-            <div id="group-three">
-                <div style="text-align:center">ABC</div>
-            </div>
-        </div>
         
     </body>
 </html>
